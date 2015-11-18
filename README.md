@@ -34,3 +34,9 @@
 - git add <fileName>
 - git commit -m '変更内容コメント'
 - git push origin <branchName>
+
+
+= rails参考資料
+
+railsガイド  
+http://railsguides.jp/
