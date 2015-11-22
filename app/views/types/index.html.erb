@@ -1,0 +1,11 @@
+
+<h2>電影種類</h2>
+
+<ol>
+  <% @types.each do | type | %>
+  <li><%= type.type_name %></li>
+  <% end %>
+</ol>
+
+
+<%= select("type", "id", Type.all.map{|type| [type.type_name, type.id]}) %>
