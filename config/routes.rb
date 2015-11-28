@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   get "types/show"
 
+  get "post/index"
+
   root "types#index"
 
   # The priority is based upon order of creation: first created -> highest priority.
