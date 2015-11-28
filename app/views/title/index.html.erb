@@ -1,0 +1,8 @@
+
+<h2>電影</h2>
+
+<ol>
+  <% @titles.each do | title | %>
+  <li> | <%= title.name %> | <%= title.comming %> | <%= title.type.name %> |</li>
+  <% end %>
+</ol>

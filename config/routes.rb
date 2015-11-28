@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'title/index'
+
+  get 'title/show'
+
   get "types/index"
 
   get "types/show"

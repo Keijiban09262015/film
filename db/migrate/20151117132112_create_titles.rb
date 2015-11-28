@@ -2,8 +2,8 @@ class CreateTitles < ActiveRecord::Migration
   def change
     create_table :titles do |t|
       t.string :name
-      t.date :comming
-      t.integer :type
+      t.string :comming, :default => 'comming soon'
+      t.integer :type_id
 
       t.timestamps null: false
     end
