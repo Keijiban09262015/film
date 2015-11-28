@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'post/index'
+
+  get 'post/show'
+
   get 'title/index'
 
   get 'title/show'
