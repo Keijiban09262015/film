@@ -5,4 +5,7 @@ class TypesController < ApplicationController
 
   def show
   end
+
+  def test
+  end
 end
