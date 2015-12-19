@@ -16,6 +16,10 @@
   - rake db:migrate
 
 
+- insertテストデータ
+  - rake db:seed
+
+
 - ローカルサーバー起動
   - rails s
 
