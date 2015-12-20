@@ -1,19 +1,23 @@
 Rails.application.routes.draw do
-  get 'title/index'
+  # test
+  get "test/index"
+  post "test/post"
 
-  get 'title/show'
+  # title
+  get "title/index"
+  get "title/show"
 
-
+  # type
   get "types/index"
-
   get "types/show"
-
   get "types/test"
 
-
+  # post
   get "post/index"
 
+  # root
   root "types#index"
+
 
 
 
