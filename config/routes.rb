@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'movie_list_admin/index'
+
+  get 'movie_list_admin/show'
+
+  get 'backend/index'
+
+  get 'backend/show'
+
   get 'title/index'
 
   get 'title/show'

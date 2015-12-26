@@ -1,0 +1,18 @@
+<h1>New Movie Genre Admin</h1>
+<p>Warnings Admin ONLY</p>
+<ol>
+  <% @types.each do | type | %>
+  <li><%= type.name %></li>
+  <% end %>
+</ol>
+
+<h4>movie genre input</h4>
+<form action="/backend/show/" moethod="post">
+ <input type="text" name="type"></input>
+ <input type="submit" value="輸入"></input>
+</form>
+
+
+
+
+<%= select("type", "id", Type.all.map{|type| [type.name, type.id]}) %>
