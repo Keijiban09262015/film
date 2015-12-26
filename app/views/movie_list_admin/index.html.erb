@@ -1,2 +1,33 @@
 <h1>Movie List Admin</h1>
-<p>Find me in app/views/movie_list_admin/index.html.erb</p>
+<h4>new movie input</h4>
+<ol>
+  <% @titles.each do | title | %>
+  <li> | <%= title.name %> | <%= title.comming %> | <%= title.type_id %> |</li>
+  <% end %>
+</ol>
+<h4>new movie title</h4>
+<form action="/movie_list_admin/show/" moethod="post">
+ <input type="text" name="titles"></input>
+
+
+<h4>movie genre</h4>
+<% @types.each do |types| %>
+  <%= check_box_tag "type_id[]", types.id%>
+  <!-- type_id[] -->
+  <%= label_tag types.name %>
+<% end %>
+<h4>coming time</h4>
+<input type="text" name="comingtime"></input>
+<input type="submit" value="輸入"></input>
+
+</form>
+
+
+
+
+
+<h4>movie genre input</h4>
+<form action="/backend/show/" moethod="post">
+ <input type="text" name="type"></input>
+ <input type="submit" value="輸入"></input>
+</form>
