@@ -11,13 +11,19 @@ Rails.application.routes.draw do
 
   get 'title/show'
 
+
   get "types/index"
 
   get "types/show"
 
+  get "types/test"
+
+
   get "post/index"
 
   root "types#index"
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
