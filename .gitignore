@@ -11,6 +11,5 @@
 /log/*
 !/log/.keep
 /tmp
-/db
+/db/schema.rb
 Gemfile.lock
-
