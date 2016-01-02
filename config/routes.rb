@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   # test
   get "test/index"
   post "test/post"
+  get "test/show"
 
   # title
   get "title/index"

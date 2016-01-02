@@ -4,5 +4,18 @@
 
 <form action="/test/post/" method="post">
   <input type="text" name="test"></input>
+  <% @types.each do |type| %>
+    <%= check_box_tag 'type[]', type.id %>
+    <%= label_tag type.name %>
+  <% end %>
+
   <input type="submit" value="post"></input>
 </form>
+
+
+
+<!--
+<form action="/test/post/" method="post">
+  <input type="text" name="test"></input>
+  <input type="submit" value="post"></input>
+</form> -->
