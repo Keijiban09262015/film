@@ -2,9 +2,23 @@
 <h4>new movie input</h4>
 <ol>
   <% @titles.each do | title | %>
-  <li> | <%= title.name %> | <%= title.comming %> | <%= title.type_id %> |</li>
+  <li>
+    | <%= title.name %>
+    | <%= title.comming %>
+    | <% if title.type_id.length > 1 then
+          type_id = title.type_id.split(",")
+          @titletypes = Type.where(id: type_id)
+      %>
+        <% @titletypes.each do | type | %>
+          <%= type.name %>
+        <% end %>
+      <% else %>
+        <%= title.type.name %>
+      <% end %>
+    |</li>
   <% end %>
 </ol>
+
 <h4>new movie title</h4>
 <form action="/movie_list_admin/show/" moethod="post">
  <input type="text" name="titles"></input>
@@ -22,12 +36,8 @@
 
 </form>
 
-
-
-
-
 <h4>movie genre input</h4>
-<form action="/backend/show/" moethod="post">
+<form action="/movie_genre_admin/show/" moethod="post">
  <input type="text" name="type"></input>
  <input type="submit" value="輸入"></input>
 </form>

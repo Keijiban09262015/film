@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+  get 'movie_trailer_admin/index'
+
+  get 'movie_trailer_admin/show'
+
+  get 'movie_genre_admin/index'
+
+  get 'movie_genre_admin/show'
+
+  get 'movie_posters_admin/index'
+
+  get 'movie_posters_admin/show'
+
   get 'movie_list_admin/index'
 
   get 'movie_list_admin/show'

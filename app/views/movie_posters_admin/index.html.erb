@@ -1,0 +1,13 @@
+<h1>Movie Posters Admin</h1>
+<h4>movie poster link input</h4>
+<form action="/movie_posters_admin/show/" moethod="post">
+
+ <%= select("title", "id", Title.all.map{|title| [title.name, title.id]}) %>
+ <input type="text" name="posters"></input>
+ <input type="submit" value="輸入"></input>
+</form>
+<% @posters.each do | poster | %>
+<input type="checkbox">
+  <img src="<%= poster.img_link %>" width="128" />
+</input>
+<% end %>

@@ -1,0 +1,2 @@
+module MoviePostersAdminHelper
+end

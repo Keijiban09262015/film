@@ -1,0 +1,7 @@
+<h1>Movie Trailer Admin</h1>
+<h4>movie trailer link input</h4>
+<form action="/movie_trailer_admin/show/" moethod="post">
+ <%= select("title", "id", Title.all.map{|title| [title.name, title.id]}) %>
+ <input type="text" name="trailer"></input>
+ <input type="submit" value="輸入"></input>
+</form>
