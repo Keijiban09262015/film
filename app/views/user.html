@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
+
+<style>
+
+    div.tiltle2 {
+        width: 200px;
+        border-radius: 10px;
+        border: 1px solid black;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    img.UserPicture {
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    div.UserPicture {
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    div.UserName {
+        width: 80px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    div.Blank {
+        width: 200px
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    div.UserTweet {
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border: 1px solid grey;
+    }
+    p.TweetContent {
+        width:150px;
+        margin-left: 10px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    div.Time {
+      color: rgba(50%,50%,0%,0.5);
+    }
+
+</style>
+
+</head>
+
+<body>
+        <div class="tiltle2">
+
+
+			<div class="UserPicture">
+			  <a href="https://www.google.com/">
+			    <img src="https://jspwiki-wiki.apache.org/attach/Slimbox/doggy.bmp"
+                    class ="UserPicture" alt = "UserPicture">
+			    </img>
+			  </a>
+			</div>
+            <div class="UserName">
+            UserName
+            </div>
+
+
+        </div>
+
+        <div class="Blank">
+
+        </div>
+
+    <%
+        num = 1
+        loop{
+    %>
+
+        <div class="UserTweet">
+            <div class="Time">
+              Time
+            </div>
+            <p class="TweetContent">
+            testtttttttttttttttttttttttttttttttttttttttttttttt
+            </p>
+        </div>
+    <%
+            num += 1
+            if num > 3 then
+                break
+            end
+        }
+    %>
+
+</body>
+
+</html>

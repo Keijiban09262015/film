@@ -29,40 +29,83 @@
     border-bottom: 1px solid white;
   }
   div.UserPicture {
-    width: 30%;
+    width: 40%;
     display: inline-block;
     //border-bottom: 1px solid yellow;
   }
-  img {
-    width: 50%;
+  img.UserPicture {
+    width: 50px;
+    display: inline-block;
+    border-radius: 25px;
+    -webkit-box-shadow: 1px 1px  1px #00f inset,1px 1px  2px #000;
+    //border-bottom: 1px solid yellow;
+  }
+  div.FilmPicture {
+    width: 15%;
+    display: inline-block;
+    //border-bottom: 1px solid yellow;
+  }
+  img.FilmPicture {
+    width: 50px;
     display: inline-block;
     transform: rotate(5deg);
     border-radius: 5px;
     -webkit-box-shadow: 1px 1px  1px #00f inset,1px 1px  2px #000;
     //border-bottom: 1px solid yellow;
   }
-  div.FilmPicture {
-    width: 30%;
+  div.Preview {
+    width: 25%;
     display: inline-block;
     //border-bottom: 1px solid yellow;
   }
-  div.Preview {
-    width: 30%;
+  img.Preview {
+    width: 50px;
     display: inline-block;
+    transform: rotate(5deg);
+    border-radius: 5px;
+    -webkit-box-shadow: 1px 1px  1px #00f inset,1px 1px  2px #000;
     //border-bottom: 1px solid yellow;
   }
   p.content {
-   word-wrap: break-word;
+      width: 80%;
+      word-wrap: break-word;
   }
   p.content:first-line {
-    color: gray;
+      color: gray;
    // border-bottom: 1px solid gray;
+  }
+  div.Time {
+    height: auto;
+  }
+  div.ButtonShow {
+      border-radius: 10px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      height: 500px;
+      border-top: 2px #d1d1d1 dashed;
+      border-right: 2px #d1d1d1 dashed;
+      border-bottom: 2px #d1d1d1 dashed;
+      border-left: 2px #d1d1d1 dashed;
+  }
+  div.ButtonShowContent {
+      margin: 0 auto;
+      margin-top: 10px;
+      width: 90%;
+      height: 90%;
+      border-top: 1px #d1d1d1 solid;
+      border-right: 1px #d1d1d1 solid;
+      border-bottom: 1px #d1d1d1 solid;
+      border-left: 1px #d1d1d1 solid;
   }
 </style>
 
 </head>
 
 <body>
+    <%
+        num = 1
+        loop{
+    %>
 
 	<div class="OutterBox">
 
@@ -82,7 +125,7 @@
 		<div class="p1">
 
 			<div class="UserPicture">
-			  <a href="https://www.google.com/">
+			  <a href="file:///Users/ryouhitoshiyao/Downloads/film/app/views/user.html">
 			    <img src="https://jspwiki-wiki.apache.org/attach/Slimbox/doggy.bmp"
 				 class ="UserPicture" alt = "UserPicture">
 			    </img>
@@ -108,10 +151,27 @@
 		</div>
 
 		<p class = "content">
-		Command:<br/>
-		testtestttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt
+      <div class="Time">
+        Time:
+      </div>
+		  Command:<br/>
+		  testtestttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt
 		</p>
 	</div>
+
+    <%
+            num += 1
+            if num > 3 then
+                break
+            end
+        }
+    %>
+
+    <div class ="ButtonShow" >
+        <div class ="ButtonShowContent" >
+        </div>
+    </div>
+
 
 </body>
 
