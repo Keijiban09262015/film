@@ -44,7 +44,29 @@ class TestController < ApplicationController
     #
     # whereIn = Type.where(id: type_id)
     # p(whereIn)
+  end
+
+  def poster
+    @posters = Poster.all
+
+    @titles = Title.order("id DESC").all
 
   end
 
+  def ajax
+    title_id = params[:title_id]
+
+    @title_posters = Poster.where(title_id: title_id)
+
+    test_img = ''
+
+    @title_posters.each do | title_poster |
+      test_img = '<img src="' + title_poster.img_link + '" width="128" />'
+    end
+    # p(test_img)
+    render json: test_img
+
+    # render json: 'called ' + title_id
+
+  end
 end

@@ -1,0 +1,54 @@
+<script>
+$(function(){
+  $('#title_id').change(function(){
+
+    var $self = $(this);
+    var title_id = $self.val();
+    // console.log($self.val());
+    getPoster(title_id).then(function(data){
+      console.log('resolve');
+      console.log(data);
+      // $('#poster_list').html('<img src="'+ data.id +'"></img>');
+      $('#poster_list').html(data);
+    }, function(){
+      console.log('reject');
+    });
+  });
+});
+
+function getPoster(title_id){
+  var df = $.Deferred();
+  $.ajax({
+      url: 'ajax',
+      type: 'GET',
+      data: {
+        title_id: title_id
+      },
+      dataType: 'html',
+      // success: df.resolve,
+      // error: df.reject
+  }).success(function(data){
+    console.log('success');
+    df.resolve(data);
+  }).error(function(data){
+    console.log('fail');
+    df.reject();
+  });
+  return df.promise();
+}
+
+</script>
+
+<h1>test#poster</h1>
+
+<% @posters.each do | poster | %>
+<input type="checkbox">
+  <img src="<%= poster.img_link %>" width="128" />
+</input>
+<% end %>
+
+<br>
+
+<%= select("title", "id", Title.all.map{|title| [title.name, title.id]}) %>
+
+<div id="poster_list"></div>

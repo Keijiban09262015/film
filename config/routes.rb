@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   get "test/index"
   post "test/post"
   get "test/show"
+  get "test/poster"
+  get "test/ajax"
 
   # title
   get "title/index"
