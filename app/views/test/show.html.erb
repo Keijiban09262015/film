@@ -8,9 +8,9 @@
     | <%= title.comming %>
     | <% if title.type_id.length > 1 then
           type_id = title.type_id.split(",")
-          @types = Type.where(id: type_id)
+          @title_types = Type.where(id: type_id)
       %>
-        <% @types.each do | type | %>
+        <% @title_types.each do | type | %>
           <%= type.name %>
         <% end %>
       <% else %>
@@ -19,3 +19,9 @@
     |</li>
   <% end %>
 </ol>
+
+
+<% @types.each do |type| %>
+  <%= check_box_tag 'type[]', type.id %>
+  <%= label_tag type.name %>
+<% end %>

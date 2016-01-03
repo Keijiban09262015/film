@@ -32,6 +32,9 @@ class TestController < ApplicationController
   def show
     @titles = Title.order("id DESC").all
 
+    @types = Type.all
+
+    p(@types.size)
     # type_id = []
     # @titles.each do |title|
     #   if title.type_id.length > 1 then
