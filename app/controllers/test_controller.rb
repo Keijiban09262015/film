@@ -64,7 +64,7 @@ class TestController < ApplicationController
     test_img = ''
 
     @title_posters.each do | title_poster |
-      test_img = '<img src="' + title_poster.img_link + '" width="128" />'
+      test_img += '<img src="' + title_poster.img_link + '" width="128" />'
     end
     # p(test_img)
     render json: test_img
